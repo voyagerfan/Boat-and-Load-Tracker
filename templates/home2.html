@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Boat App</title>
+  </head>
+  <style>
+    .fit{
+        width: 450px;
+        word-wrap:break-word;
+        text-align: center, justify;
+        margin: auto;
+    }
+    .center{
+        text-align: center;
+    }
+</style>
+  <body>
+    {% if session %}
+    <h1>Welcome, Authenticated User!!</h1>
+    <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+    
+    
+    <h3>Your encoded JWT</h3> 
+    <p>
+    {{encodedJWT}}
+    </p>
+
+    <h3>Your Decoded JWT </h3>
+    <p>
+    {%for element in decodedData%}
+        <ul>
+            <li>
+            {{element}}: {{decodedData[element]}}
+            </li>
+        </ul>
+        {% endfor %}
+    </p>
+
+    <h3> Your User Id </h3>
+      <p>
+        {{userID}}
+      </p>
+
+    <h3> Entity Creation Status in the Datastore </h3>
+      <p>
+        {{entityStatus}}
+      </p>
+
+    
+ 
+
+    <div><pre>{{pretty}}</pre></div>
+    {% else %}
+    <div class="fit">
+      <h1 id="profileDropDown">Welcome Guest</h1>
+        <p>
+        <font size="+2">
+        By clicking the "Login" link below, you will be re-routed to Autho for authentication. 
+        Once there, you may log in using an existing account or create a new account. After successfully logging in or creating a new account, your user information 
+        will be display.
+        </font> 
+        </p>
+      <p><a href="/login" id="qsLoginBtn">Login</a></p>
+    </div>
+    {% endif %}
+  </body>
+</html>

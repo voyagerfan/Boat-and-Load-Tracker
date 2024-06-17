@@ -12,12 +12,7 @@ Welcome to the Boat and Load Tracker API
   - [Technologies Used](#technologies-used)
   - [Installation and Operation](#installation-and-operation)
     - [Option 1:](#option-1)
-- [refer to API doc for body keys and values for post requests](#refer-to-api-doc-for-body-keys-and-values-for-post-requests)
-- [Create post request. Store reponse in "response"](#create-post-request-store-reponse-in-response)
-- [Print the status code and response text](#print-the-status-code-and-response-text)
     - [Option 2:](#option-2)
-
-
 ## Overview
 
 The Boat and Load Tracker is a supply chain API that allows a user to perform various interdependent Create, Read, Update and Delete (CRUD) operations on entities such as Owners, Boats and Loads. Secure access is to the API is implemeted with Auth0. API documentation is included which details endpoint calls and responses.
@@ -79,44 +74,8 @@ Callback screen with JWT infomation
 You may make API calls using the host URL (listed in resume) and endpoints (listed in the documentaion) with a method of your choosing. Please keep in mind that the request header will require your bearer token. Retrieve your bearer token using Option 2, section 3.1 - 3.3.
 
 Example of a post request using Python:
+![](./screenshots/generic_code.png)
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-
-
-<pre style="font-size:7pt;">
-#Python code to execute a post request
-
-url = 'ADD URL FROM RESUE HERE/ENDPOINT'
-#url = 'https://myapp.wl.r.appspot.com/Boats' 
-
-bearer_token = 'ADD BEARER TOKEN HERE'
-
-headers = {
-    'Authorization': f'Bearer {bearer_token}',
-    'Content-Type': 'application/json'
-}
-
-# refer to API doc for body keys and values for post requests
-body = {
-    'key1': 'value1',
-    'key2': 'value2',
-    'key3': 'value3'
-}
-
-# Create post request. Store reponse in "response"
-response = requests.post(url, headers=headers, json=body)
-
-# Print the status code and response text
-print(f'Status Code: {response.status_code}')
-print(f'Response Text: {response.text}')
-</pre>
-</body>
-</html>
 
 ### Option 2:
 Prerequisites: <a href="https://www.postman.com/downloads" target="_blank">Postman</a>

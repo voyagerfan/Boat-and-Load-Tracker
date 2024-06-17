@@ -1,6 +1,6 @@
 # Boat-and-Load-Tracker
 
-Welcome to the Boat and Load Tracker API
+Welcome to the Boat and Load Tracker API!
 
 ## Table of Contents
 - [Boat-and-Load-Tracker](#boat-and-load-tracker)
@@ -82,12 +82,12 @@ Prerequisites: <a href="https://www.postman.com/downloads" target="_blank">Postm
 
 Once you have downloaded Postman:
 1. Configure the Postman environment
-   1. Download the Postman Collection <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_files" target="_blank">Environment File</a> 
+   1. Download the Postman environment <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_Files/boatAPI.postman_environment.json" target="_blank">Environment File</a> 
    2. Open Postman, click on the **Environments** tab on the left side
    3. Drag the downloaded environment file into the environment pane of Postman.
    4. In the top right corner of the application window, there may be a dropdown menu that says "No Environment". Click this dropdown and select the environment that was added.
 2. Add the Postman Collection
-   1. Download the Postman Collection <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_files" target="_blank">Collection File</a> 
+   1. Download the Postman Collection <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_Files/BoatAPI.postman_collection.json" target="_blank">Collection File</a> 
    2. Click on the **Collections** tab on the left side of the Postman application.
    3. Drag the downloaded collection file into the Postman collections pane
 3. Retrieve a Bearer token

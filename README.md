@@ -12,7 +12,6 @@ Welcome to the Boat and Load Tracker API
   - [Technologies Used](#technologies-used)
   - [Installation and Operation](#installation-and-operation)
     - [Option 1:](#option-1)
-- [url = 'https://myapp.wl.r.appspot.com/Boats'](#url--httpsmyappwlrappspotcomboats)
 - [refer to API doc for body keys and values for post requests](#refer-to-api-doc-for-body-keys-and-values-for-post-requests)
 - [Create post request. Store reponse in "response"](#create-post-request-store-reponse-in-response)
 - [Print the status code and response text](#print-the-status-code-and-response-text)
@@ -93,7 +92,7 @@ Example of a post request using Python:
 #Python code to execute a post request
 
 url = 'ADD URL FROM RESUE HERE/ENDPOINT'
-# url = 'https://myapp.wl.r.appspot.com/Boats' 
+#url = 'https://myapp.wl.r.appspot.com/Boats' 
 
 bearer_token = 'ADD BEARER TOKEN HERE'
 

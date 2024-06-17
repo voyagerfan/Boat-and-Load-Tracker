@@ -3,6 +3,8 @@
 Welcome to the Boat and Load Tracker API
 
 ## Table of Contents
+- [Boat-and-Load-Tracker](#boat-and-load-tracker)
+  - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [App File Structure](#app-file-structure)
   - [Features](#features)
@@ -10,7 +12,6 @@ Welcome to the Boat and Load Tracker API
   - [Technologies Used](#technologies-used)
   - [Installation and Operation](#installation-and-operation)
     - [Option 1:](#option-1)
-    - [Option 2:](#option-2)
 - [url = 'https://myapp.wl.r.appspot.com/Boats'](#url--httpsmyappwlrappspotcomboats)
 - [refer to API doc for body keys and values for post requests](#refer-to-api-doc-for-body-keys-and-values-for-post-requests)
 - [Create post request. Store reponse in "response"](#create-post-request-store-reponse-in-response)
@@ -48,12 +49,16 @@ This API includes the following features:
 
 ## Screenshots
 Welcome Screen
+
 ![](./screenshots/welcomescreen.png)
 
 Auth0 Login Screen
+
 ![](./screenshots/auth0login2.png)
 
+
 Callback screen with JWT infomation
+
 ![](./screenshots/JWTscreen2.png)
 
 
@@ -80,28 +85,11 @@ Example of a post request using Python:
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Code Snippet</title>
-    <style>
-        pre {
-            font-size: 5pt;
-            background: black;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .copy-btn {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 
 
-<pre id="code-block">
+<pre style="font-size:7pt;">
 #Python code to execute a post request
 
 url = 'ADD URL FROM RESUE HERE/ENDPOINT'
@@ -128,21 +116,6 @@ response = requests.post(url, headers=headers, json=body)
 print(f'Status Code: {response.status_code}')
 print(f'Response Text: {response.text}')
 </pre>
-<button class="copy-btn" onclick="copyCode()">Copy</button>
-
-<script>
-    function copyCode() {
-        const codeBlock = document.getElementById('code-block');
-        const range = document.createRange();
-        range.selectNode(codeBlock);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        alert('Code copied to clipboard');
-    }
-</script>
-
 </body>
 </html>
 

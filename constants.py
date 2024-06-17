@@ -1,0 +1,5 @@
+loads = "loads"
+boats = "boats"
+owner = "owner"
+host = "enter host URL here"
+#localhost = "http://127.0.0.1:8080"

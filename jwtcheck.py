@@ -7,7 +7,7 @@ from flask_cors import cross_origin
 from jose import jwt
 
 
-DOMAIN = 'dev-llzmw6w3z0rv13sm.us.auth0.com'
+DOMAIN = 'enter client domain from Auth0 here'
 ALGORITHMS = ["RS256"]
 
 bp = Blueprint('jwtcheck', __name__, url_prefix='/jwtcheck')

@@ -3,8 +3,6 @@
 Welcome to the Boat and Load Tracker API!
 
 ## Table of Contents
-- [Boat-and-Load-Tracker](#boat-and-load-tracker)
-  - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [App File Structure](#app-file-structure)
   - [Features](#features)

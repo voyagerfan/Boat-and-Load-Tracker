@@ -74,6 +74,8 @@ Callback screen with JWT infomation
 You may make API calls using the host URL (listed in resume) and endpoints (listed in the documentaion) with a method of your choosing. Please keep in mind that the request header will require your bearer token. Retrieve your bearer token using Option 2, section 3.1 - 3.3.
 
 Example of a post request using Python:
+
+
 ![](./screenshots/generic_code.png)
 
 

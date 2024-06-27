@@ -149,7 +149,7 @@ Once you have downloaded Postman:
    2. Following the instructions, you will be re-routed to Auth0 to login or create a new user account.
    
    > [!NOTE]
-   If you would prefer not to use your own email to create an Auth0 account, you may use a disposable email from [temp-email.org/en](https://temp-mail.org/en/)
+   > If you would prefer not to use your own email to create an Auth0 account, you may use a disposable >email from [temp-email.org/en](https://temp-mail.org/en/)
    
    3. After successful login, you will be redirected to the back to the API login page. Your bearer token will be displayed under "Encoded JWT". **Please copy this bearer token**
 4. Add the App URL your Bearer token to the Postman environment

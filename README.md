@@ -3,6 +3,8 @@
 Welcome to the Boat and Load Tracker API!
 
 ## Table of Contents
+- [Boat-and-Load-Tracker](#boat-and-load-tracker)
+  - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [App File Structure](#app-file-structure)
   - [Features](#features)
@@ -12,6 +14,8 @@ Welcome to the Boat and Load Tracker API!
     - [Option 1:](#option-1)
     - [Option 2:](#option-2)
 ## Overview
+> [!CAUTION]
+This deployed API connects to a production database to store data on a cloud server. To ensure your privacy, kindly refrain from entering any personal/sensitive information.
 
 The Boat and Load Tracker is a supply chain API that allows a user to perform various interdependent Create, Read, Update and Delete (CRUD) operations on entities such as Owners, Boats and Loads. Secure access is to the API is implemeted with Auth0. API documentation is included which details endpoint calls and responses.
 
@@ -71,16 +75,64 @@ Callback screen with JWT infomation
 ### Option 1:
 You may make API calls using the host URL (listed in resume) and endpoints (listed in the documentaion) with a method of your choosing. Please keep in mind that the request header will require your bearer token. Retrieve your bearer token using Option 2, section 3.1 - 3.3.
 
-Example of a post request using Python:
+Example POST request using Python:
 
+```python
+import requests
 
-![](./screenshots/generic_code.png)
+# Refer to API doc for endpoints
+url = 'ADD URL FROM RESUME HERE' + 'ADD ENDPOINT HERE'
+
+bearer_token = "ADD BEARER TOKEN HERE"
+
+headers = {
+   'Authorization': f'Bearer {bearer_token}',
+   'Content-type': 'application/json'
+}
+
+# Refer to API doc for keys and values for post requests
+body = {
+   'key1': 'value1',
+   'key2': 'value2',
+   'key3': 'value3'
+}
+
+# Create the post request. Store the response in "response"
+response = requests.post(url, headers=headers, json=body)
+
+# Print the status code and response
+print(f'Status Code {response.status_code}')
+print(f'Response Text: {response.json()}')
+
+```
+Example GET request using Python:
+```python
+import requests
+
+# Refer to API doc for endpoints
+url = 'ADD URL FROM RESUME HERE' + 'ADD ENDPOINT HERE'
+
+bearer_token = "ADD BEARER TOKEN HERE"
+
+headers = {
+   'Authorization': f'Bearer {bearer_token}',
+   'Content-type': 'application/json'
+}
+
+# Create the get request. Store the response in "response"
+response = requests.get(url, headers=headers)
+
+print(f'Status Code {response.status_code}')
+print(f'Response Text: {response.json()}')
+```
+
+PUT, PATCH and DELETE requests are constructed similarly. The requests method will need to be changed and the body may need to be included. Please see API doc for details. 
 
 
 ### Option 2:
 Prerequisites: <a href="https://www.postman.com/downloads" target="_blank">Postman</a>
 
-Once you have downloaded Postman:
+You may explore the API using the proivded Postman Environment and Collection. Once you have downloaded Postman:
 1. Configure the Postman environment
    1. Download the Postman environment <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_Files/boatAPI.postman_environment.json" target="_blank">Environment File</a> 
    2. Open Postman, click on the **Environments** tab on the left side
@@ -93,6 +145,8 @@ Once you have downloaded Postman:
 3. Retrieve a Bearer token
    1. Access the API login page (see resume for URL)
    2. Following the instructions, you will be re-routed to Auth0 to login or create a new user account.
+   >[!NOTE]
+   If you would prefer not to use your own email to create an account, you may use a disposable email from https://temp-mail.org/en/
    3. After successful login, you will be redirected to the back to the API login page. Your bearer token will be displayed under "Encoded JWT". **Please copy this bearer token**
 4. Add the App URL your Bearer token to the Postman environment
    1. Open the enviroments tab in Postman

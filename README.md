@@ -134,6 +134,9 @@ Prerequisites: <a href="https://www.postman.com/downloads" target="_blank">Postm
 
 You may explore the API using the proivded Postman Environment and Collection. 
 
+> [!NOTE]
+   If you would prefer not to use your own email to create an Auth0 account (section 3), you may use a disposable email from [temp-email.org/en](https://temp-mail.org/en/)
+
 Once you have downloaded Postman:
 1. Configure the Postman environment
    1. Download the Postman environment <a href="https://github.com/voyagerfan/Boat-and-Load-Tracker/blob/main/Postman_Files/boatAPI.postman_environment.json" target="_blank">Environment File</a> 
@@ -147,10 +150,6 @@ Once you have downloaded Postman:
 3. Retrieve a Bearer token
    1. Access the API login page (see resume for URL)
    2. Following the instructions, you will be re-routed to Auth0 to login or create a new user account.
-   
-   > [!NOTE]
-   > If you would prefer not to use your own email to create an Auth0 account, you may use a disposable >email from [temp-email.org/en](https://temp-mail.org/en/)
-   
    3. After successful login, you will be redirected to the back to the API login page. Your bearer token will be displayed under "Encoded JWT". **Please copy this bearer token**
 4. Add the App URL your Bearer token to the Postman environment
    1. Open the enviroments tab in Postman
